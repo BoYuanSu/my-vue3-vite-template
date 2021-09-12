@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: 2020
   },
   globals : {
-    defineProps: true
+    defineProps: 'readonly'
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
