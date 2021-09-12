@@ -1,0 +1,19 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "eslint.options": {
+        "extenstions": [
+            ".html",
+            ".js",
+            ".vue"
+        ]
+    },
+    "eslint.validate": [
+        "html",
+        "javascript",
+        "vue"
+    ]
+}
