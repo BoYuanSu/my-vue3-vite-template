@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, inject } from 'vue'
 
 defineProps({
   msg: { type: String, default: 'Hello Vue 3' }
@@ -9,12 +9,16 @@ const clickHandler = () => {
   console.log('🚀 ~ file: HelloWorld.vue ~ line 11 ~ clickHandler ~ clickHandler')
 }
 
+const versoin = inject('version')
+const isLocal = inject('isLocal')
 const count = ref(0)
 
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
+  <h2>ENV versoin: {{ versoin }}</h2>
+  <h2>ENV isLocal: {{ isLocal }}</h2>
   <input
     v-model="msg2"
     type="123"
@@ -60,8 +64,9 @@ const count = ref(0)
   </p>
 </template>
 
-<style scoped>
+<style lang="postcss" scoped>
 a {
   color: #42b983;
+  @apply max-w-[1440px] bg-green-400;
 }
 </style>
