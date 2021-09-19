@@ -4,7 +4,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 import { ref, provide } from 'vue'
-import configuration from './configuration'
+import configuration from '@/configuration'
 
 const appTitle = ref('')
 appTitle.value = configuration('appTitle')
