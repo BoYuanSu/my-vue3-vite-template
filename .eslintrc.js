@@ -12,9 +12,12 @@ module.exports = {
   },
   globals: {
     defineProps: 'readonly',
-    __APP_VERSION__: 'readonly'
+    VITE_APP_VERSION: 'readonly'
+    // customEnv: 'readonly',
+    // custom:'readonly'
   },
   rules: {
+    'no-unused-vars': 'warn',
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }
