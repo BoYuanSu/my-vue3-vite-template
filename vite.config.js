@@ -13,6 +13,7 @@ export default defineConfig({
     eslintPlugin()
   ],
   resolve: {
+    extensions: ['.vue', '.scss', '.json', 'js'], // allow import skip *.vue *.scss
     alias: {
       '@': path.resolve(__dirname, './src')
     }
