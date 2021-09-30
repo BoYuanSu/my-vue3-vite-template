@@ -19,7 +19,7 @@ export default defineConfig({
     })
   ],
   resolve: {
-    extensions: ['.vue', '.scss', '.json', 'js'], // allow import skip *.vue *.scss
+    extensions: ['.vue', '.scss', '.json', '.js'], // allow import skip *.vue *.scss
     alias: {
       '@': path.resolve(__dirname, './src')
     }
