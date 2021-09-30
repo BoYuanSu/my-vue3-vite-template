@@ -1,16 +1,22 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import eslintPlugin from 'vite-plugin-eslint'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 import gitVersionTag from 'git-tag-version'
 
 import path from 'path'
 
+const env = loadEnv('', process.cwd())
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    eslintPlugin()
+    eslintPlugin(),
+    visualizer({
+      open: env.VITE_SHOW_STATS === 'true'
+    })
   ],
   resolve: {
     extensions: ['.vue', '.scss', '.json', 'js'], // allow import skip *.vue *.scss
